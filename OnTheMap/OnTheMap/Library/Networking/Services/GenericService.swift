@@ -27,7 +27,13 @@ enum JSONDecodingError: Error, LocalizedError {
 }
 
 class GenericService {
-    
+
+    struct ServiceIdentifiers {
+        static let apiKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
+        static let applicationId = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
+        static let baseUrl = "https://parse.udacity.com/parse/classes/StudentLocation"
+    }
+
     private func request(url:URL,method:ServiceMethods,parameters:[String:Any]? = nil,hasHTTPHeader:Bool? = true, isParseRequest:Bool? = false, handler: @escaping (_ response: URLResponse?, _ data:Data?,_ error: Error?) -> Void) {
         
         let request = NSMutableURLRequest(url: url)
@@ -38,8 +44,8 @@ class GenericService {
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         }
         if isParseRequest! {
-            request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
-            request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
+            request.addValue(ServiceIdentifiers.applicationId, forHTTPHeaderField: "X-Parse-Application-Id")
+            request.addValue(ServiceIdentifiers.apiKey, forHTTPHeaderField: "X-Parse-REST-API-Key")
         }
         if let parameters = parameters {
             request.httpBody = try? JSONSerialization.data(
@@ -68,6 +74,13 @@ class GenericService {
                 return
             }
             
+            let statusCode = (response as! HTTPURLResponse).statusCode
+            
+            if statusCode == 403 {
+                completion(ResultType.Failure(e: NSError(domain: "", code: 403, userInfo: [NSLocalizedDescriptionKey: "Wrong username/password"])))
+                return
+            }
+
             guard let data = data else {
                 completion(ResultType.Failure(e: error!))
                 return

@@ -109,8 +109,8 @@ class AddLocationViewController: GenericViewController {
     private func syncStudentLocation(_ coordinate: CLLocationCoordinate2D) {
         self.enableControllers(true)
         
-        let viewController = storyboard?.instantiateViewController(withIdentifier: "MapPinLocationViewController") as! MapPinLocationViewController
-        viewController.studentInformation = buildStudentInfo(coordinate)
+        let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        let viewController = homeStoryboard.instantiateViewController(withIdentifier: "MapPinLocationViewController") as! MapPinLocationViewController
         navigationController?.pushViewController(viewController, animated: true)
         
     }

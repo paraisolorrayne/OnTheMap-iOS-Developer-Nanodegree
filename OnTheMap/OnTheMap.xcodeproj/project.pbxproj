@@ -24,7 +24,7 @@
 		55D4D88821613AD500532805 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4D88721613AD500532805 /* AddLocationViewController.swift */; };
 		55D4D88A21613B0400532805 /* MapPinLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4D88921613B0400532805 /* MapPinLocationViewController.swift */; };
 		55D4D88C2161417D00532805 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4D88B2161417D00532805 /* LoaderView.swift */; };
-		55D4D890216141E400532805 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4D88F216141E400532805 /* UIViewController+.swift */; };
+		55D4D890216141E400532805 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4D88F216141E400532805 /* UIViewController+Utils.swift */; };
 		55D4D8942161422400532805 /* UdacityUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4D8932161422400532805 /* UdacityUtils.swift */; };
 		55D4D8972161428700532805 /* GenericService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4D8962161428700532805 /* GenericService.swift */; };
 		55D4D899216142DF00532805 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D4D898216142DF00532805 /* LoginService.swift */; };
@@ -83,7 +83,7 @@
 		55D4D88721613AD500532805 /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		55D4D88921613B0400532805 /* MapPinLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPinLocationViewController.swift; sourceTree = "<group>"; };
 		55D4D88B2161417D00532805 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
-		55D4D88F216141E400532805 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		55D4D88F216141E400532805 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		55D4D8932161422400532805 /* UdacityUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityUtils.swift; sourceTree = "<group>"; };
 		55D4D8962161428700532805 /* GenericService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericService.swift; sourceTree = "<group>"; };
 		55D4D898216142DF00532805 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 		55D4D88E216141C500532805 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				55D4D88F216141E400532805 /* UIViewController+.swift */,
+				55D4D88F216141E400532805 /* UIViewController+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -541,7 +541,7 @@
 				55D4D8792161389100532805 /* GenericViewController.swift in Sources */,
 				55D4D880216139F700532805 /* MapViewController.swift in Sources */,
 				55D4D88C2161417D00532805 /* LoaderView.swift in Sources */,
-				55D4D890216141E400532805 /* UIViewController+.swift in Sources */,
+				55D4D890216141E400532805 /* UIViewController+Utils.swift in Sources */,
 				55D4D88221613A4100532805 /* LocationListViewController.swift in Sources */,
 				55D4D83E216132C600532805 /* AppDelegate.swift in Sources */,
 				55D4D899216142DF00532805 /* LoginService.swift in Sources */,
@@ -714,13 +714,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39H6XWV852;
+				DEVELOPMENT_TEAM = HP8735289J;
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.company.OnTheMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -733,13 +733,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39H6XWV852;
+				DEVELOPMENT_TEAM = HP8735289J;
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.company.OnTheMap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
